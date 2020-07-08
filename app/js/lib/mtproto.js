@@ -37,6 +37,7 @@ angular.module('izhukov.mtproto', ['izhukov.utils'])
           // chosenServer = 'https://' + subdomain + '.web.telegram.org/' + path
           // 替换原理请求路径
           chosenServer = location.origin + '/' + subdomain + '/' + path
+          console.log('chosenServer=',chosenServer);
           return chosenServer
         }
 
