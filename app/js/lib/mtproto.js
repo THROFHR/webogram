@@ -36,7 +36,7 @@ angular.module('izhukov.mtproto', ['izhukov.utils'])
           // var path = Config.Modes.test ? 'apiw_test1' : 'apiw1'
           // chosenServer = 'https://' + subdomain + '.web.telegram.org/' + path
           // 替换原理请求路径
-          chosenServer = '/' + subdomain + '/' + path
+          chosenServer = location.origin + '/' + subdomain + '/' + path
           return chosenServer
         }
 
