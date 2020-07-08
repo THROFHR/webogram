@@ -1,0 +1,9 @@
+{
+  "routes": [
+    { "src": "/pluto/(.*)", "dest": "https://pluto.web.telegram.org/$1" },
+    { "src": "/venus/(.*)", "dest": "https://venus.web.telegram.org/$1" },
+    { "src": "/aurora/(.*)", "dest": "https://aurora.web.telegram.org/$1" },
+    { "src": "/vesta/(.*)", "dest": "https://vesta.web.telegram.org/$1" },
+    { "src": "/flora/(.*)", "dest": "https://flora.web.telegram.org/$1" }
+  ]
+}
