@@ -28,14 +28,15 @@ angular.module('izhukov.mtproto', ['izhukov.utils'])
 
     function chooseServer (dcID, upload) {
       if (chosenServers[dcID] === undefined) {
-        var chosenServer = false,
-          i, dcOption
+        var chosenServer = false, i, dcOption;
 
+        window.$Config = Config
+        console.log('chooseServer=');
         if (Config.Modes.ssl || !Config.Modes.http) {
           var subdomain = sslSubdomains[dcID - 1] + (upload ? '-1' : '')
           // var path = Config.Modes.test ? 'apiw_test1' : 'apiw1'
           // chosenServer = 'https://' + subdomain + '.web.telegram.org/' + path
-          // 替换原理请求路径
+          // 替换原理请求路径  
           chosenServer = location.origin + '/' + subdomain + '/' + path
           console.log('chosenServer=',chosenServer);
           return chosenServer
